@@ -20,7 +20,6 @@ class ViewController: UIViewController {
         webView = WKWebView()
         container.addSubview(webView)
         
-        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -46,14 +45,17 @@ class ViewController: UIViewController {
 
     @IBAction func loadSwift(sender: AnyObject) {
           loadRequest("https://developer.apple.com/swift/")
+    
     }
 
     @IBAction func loadNailPolish(sender: AnyObject) {
         loadRequest("http://www.essie.com/Colors.aspx")
+    
     }
 
     @IBAction func loadDoughnuts(sender: AnyObject) {
         loadRequest("http://doughnutplant.com/photo/")
+    
     }
 }
 

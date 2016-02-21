@@ -27,11 +27,7 @@ class ViewController: UIViewController {
         let frame = CGRectMake(0, 0, container.bounds.width, container.bounds.height)
         webView.frame = frame
         
-        let urlString = "https://developer.apple.com/swift/"
-        let url = NSURL(string: urlString)!
-        let request = NSURLRequest(URL: url)
-        
-        webView.loadRequest(request)
+        loadRequest("https://developer.apple.com/swift/")
 
     }
 
@@ -39,7 +35,25 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func loadRequest(urlString: String) {
+        let url = NSURL(string: urlString)!
+        let request = NSURLRequest(URL: url)
+        
+        webView.loadRequest(request)
 
+    }
 
+    @IBAction func loadSwift(sender: AnyObject) {
+          loadRequest("https://developer.apple.com/swift/")
+    }
+
+    @IBAction func loadNailPolish(sender: AnyObject) {
+        loadRequest("http://www.essie.com/Colors.aspx")
+    }
+
+    @IBAction func loadDoughnuts(sender: AnyObject) {
+        loadRequest("http://doughnutplant.com/photo/")
+    }
 }
 
